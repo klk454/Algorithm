@@ -1,0 +1,28 @@
+set autoindent
+set backspace=2
+set backspace=indent,eol,start
+set hlsearch
+set ci
+set nu
+set smartindent
+set ts=4
+set sw=4
+syntax on
+
+colorscheme abstract
+set guifont=Consolas:h14:b
+set guifontwide=Dotumche:h11:cDEFAULT
+set noswapfile
+set noundofile
+set nobackup
+set nowritebackup
+
+filetype plugin indent on
+
+map <F9> :w<CR>:!g++ % -std=c++1y -O2 -o %<.exe<CR>
+map <C-F9> :!%<.exe<CR>
+map <C-F10> :!%<.exe < input.txt<CR>
+map <F2> :5sp input.txt<CR>
+map <C-a> <esc>ggVG<CR>
+map <C-c> "+y<CR>
+map <C-v> "+gP<CR>
